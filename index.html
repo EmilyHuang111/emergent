@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="CareBridge connects caregivers, wearable insights, and licensed nurses for the first 30 days of recovery at home. Explore a fictional recovery demonstration.">
+<meta name="theme-color" content="#f69322">
+<title>CareBridge — A stronger recovery at home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles/dashboard.css">
+<link rel="stylesheet" href="styles/site.css">
+<link rel="stylesheet" href="styles/home.css">
+<link rel="stylesheet" href="styles/care-plan.css">
+<link rel="stylesheet" href="styles/monitoring.css">
+<link rel="stylesheet" href="styles/daily-checklist.css">
+<link rel="stylesheet" href="styles/clinical-review.css">
+<link rel="stylesheet" href="styles/overview.css">
+<link rel="stylesheet" href="styles/coordination.css">
+</head>
+<body data-persona="caregiver" data-view="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+ <div class="site-header-in">
+  <a class="site-brand" href="#home" onclick="go('home');return false" aria-label="CareBridge home">
+   <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M5 28V17C5 8 15 6 20 13C25 6 35 8 35 17V28" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M5 25H14L18 18L23 31L27 25H35" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   <span>Care<span>Bridge</span></span>
+  </a>
+  <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+   <button class="nav-link" onclick="scrollHomeSection('platform')">Our platform</button>
+   <button class="nav-link" onclick="scrollHomeSection('how-it-works')">How it works</button>
+   <button class="nav-link" onclick="scrollHomeSection('who-we-serve')">Who we serve</button>
+   <button class="nav-cta" onclick="go('plan')">Explore the demo <span aria-hidden="true">↗</span></button>
+  </nav>
+  <div class="demo-controls" id="demo-controls" hidden>
+   <button class="back-home" onclick="go('home')">← About CareBridge</button>
+   <div class="persona" role="group" aria-label="Demo view as">
+    <button id="pCare" aria-pressed="true" onclick="setPersona('caregiver')">Caregiver</button>
+    <button id="pClin" aria-pressed="false" onclick="setPersona('clinician')">Clinician</button>
+   </div>
+   <div class="pchip"><span class="avatar">EW</span><span><b>Eleanor W.</b> · Day 5 of 30</span></div>
+  </div>
+  <button class="iconbtn theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle light or dark theme"><svg id="themeIcon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"></svg></button>
+ </div>
+</header>
+<nav class="rail" id="workspace-nav" aria-label="Recovery demo sections" hidden><div class="rail-in" id="rail" role="tablist" aria-label="Recovery demo sections"></div></nav>
+<main class="wrap" id="main" tabindex="-1"></main>
+<noscript><p style="padding:40px">Enable JavaScript to explore CareBridge’s interactive recovery demonstration. CareBridge equips caregivers with daily plans and connects concerns to licensed nurses.</p></noscript>
+<script src="scripts/data.js"></script>
+<script src="scripts/icons.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/theme.js"></script>
+<script src="components/home.js"></script>
+<script src="components/overview.js"></script>
+<script src="components/care-plan.js"></script>
+<script src="components/daily-checklist.js"></script>
+<script src="components/monitoring.js"></script>
+<script src="components/coordination.js"></script>
+<script src="components/clinical-review.js"></script>
+<script src="scripts/boot.js"></script>
+</body>
+</html>
