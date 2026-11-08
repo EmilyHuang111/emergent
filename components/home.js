@@ -1,0 +1,40 @@
+/* Marketing homepage. Kept independent from the recovery workspace views. */
+VIEWS.home = function homeView() {
+  return `<div class="home-page">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero-copy">
+        <span class="home-kicker"><span></span> THE NEXT CHAPTER OF HOME RECOVERY</span>
+        <h1 id="home-title">A stronger recovery.<br>A little closer<br>to <em>home.</em></h1>
+        <p>Give caregivers the clarity to do more. CareBridge turns complex hospital instructions into everyday care, with AI assistance and licensed nurses guiding the way.</p>
+        <div class="home-actions"><button class="home-button" onclick="go('plan')">Explore the recovery demo <span aria-hidden="true">↗</span></button><button class="home-text-button" onclick="go('overview')"><span class="home-play" aria-hidden="true">▶</span> See CareBridge in action</button></div>
+        <div class="home-hero-note"><span class="home-note-icon" aria-hidden="true">✓</span><span>More confidence for caregivers.<br><strong>More connection for everyone.</strong></span></div>
+      </div>
+      <div class="home-hero-visual">
+        <div class="home-photo-frame"><img src="assets/caregiver.jpg" alt="A reassuring hand held in support" fetchpriority="high"><span class="home-photo-caption">Good care starts with a human connection.</span></div>
+        <div class="home-recovery-card"><div class="home-recovery-icon">${svg(I.heart)}</div><div><strong>A clearer path forward</strong><span>One connected, 30-day recovery plan</span></div><span class="home-small-check" aria-hidden="true">✓</span></div>
+        <div class="home-human-card"><span class="home-status-dot"></span> AI-assisted. Nurse-supervised.</div>
+      </div>
+    </section>
+
+    <section class="home-belief" aria-label="CareBridge approach"><p>BETTER TOGETHER, FROM HOSPITAL TO HOME</p><div><span>Caregiver confidence</span><i aria-hidden="true">+</i><span>Connected recovery</span><i aria-hidden="true">+</i><span>Clinical oversight</span></div></section>
+
+    <section class="home-platform" id="platform" aria-labelledby="home-platform-title">
+      <div class="home-section-heading"><span class="home-kicker">THE HOME RECOVERY PLATFORM</span><h2 id="home-platform-title">Ordinary caregivers.<br><em>Extraordinary support.</em></h2><p>The first 30 days home can feel overwhelming. Put the right information, the right next step, and the right people within reach.</p></div>
+      <div class="home-features">
+        <button class="home-feature" onclick="go('plan')"><span class="home-feature-number">01 / UNDERSTAND</span><div class="home-feature-icon">${svg(I.doc)}</div><h3>From paperwork<br>to a plan.</h3><p>Translate discharge instructions into clear daily tasks, medication reminders, and recovery routines.</p><span class="home-feature-link">Explore care planning <b aria-hidden="true">↗</b></span></button>
+        <button class="home-feature" onclick="go('today')"><span class="home-feature-number">02 / SUPPORT</span><div class="home-feature-icon">${svg(I.check)}</div><h3>A little guidance.<br>A lot of confidence.</h3><p>Help aides support prescribed exercises, meals, and daily routines with an actionable checklist.</p><span class="home-feature-link">See a caregiver’s day <b aria-hidden="true">↗</b></span></button>
+        <button class="home-feature" onclick="go('monitor')"><span class="home-feature-number">03 / CONNECT</span><div class="home-feature-icon">${svg(I.pulse)}</div><h3>Small changes.<br>A clearer picture.</h3><p>Bring wearable trends and caregiver observations together so concerns reach a licensed professional.</p><span class="home-feature-link">Explore monitoring <b aria-hidden="true">↗</b></span></button>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="home-story" aria-labelledby="home-story-title"><div class="home-story-preview"><div class="home-preview-top"><span class="home-preview-avatar">EW</span><div><strong>Eleanor’s recovery</strong><small>Fictional patient · Day 5 of 30</small></div><span class="home-preview-live">DEMO</span></div><h3>A change worth a closer look.</h3><p>Mobility is lower than expected, and her caregiver has noticed new discomfort.</p><div class="home-preview-chart" role="img" aria-label="Illustrative daily mobility trend declining from day three to day five"><span style="--bar:35%">1</span><span style="--bar:52%">2</span><span style="--bar:90%">3</span><span style="--bar:57%">4</span><span style="--bar:24%">5</span></div><div class="home-preview-alert">${svg(I.shield)} <span>Next step: licensed nurse review</span><span aria-hidden="true">↗</span></div></div><div class="home-story-copy"><span class="home-kicker">MEET ELEANOR. FOLLOW HER RECOVERY.</span><h2 id="home-story-title">See the whole picture.<br><em>Support the next step.</em></h2><p>Eleanor is 82 and returning home after hip surgery. Follow a fictional recovery episode and see how CareBridge connects her caregiver and clinical team.</p><ol class="home-demo-steps"><li><b>1</b><span>Start with her hospital discharge instructions</span></li><li><b>2</b><span>Explore her daily caregiver checklist</span></li><li><b>3</b><span>Review simulated wearable changes</span></li><li><b>4</b><span>Draft a summary for her supervising nurse</span></li></ol><button class="home-button" onclick="go('plan')">Walk through the demo <span aria-hidden="true">↗</span></button></div></section>
+
+    <section class="home-audiences" id="who-we-serve" aria-labelledby="home-audiences-title"><div class="home-section-heading"><span class="home-kicker">ONE RECOVERY. A CONNECTED TEAM.</span><h2 id="home-audiences-title">Built around people.<br><em>Designed for care teams.</em></h2></div><div class="home-audience-grid"><article><span>FOR HOSPITALS</span><h3>A better bridge<br>beyond discharge.</h3><p>Extend the discharge plan into the home with visibility into task completion and concerns that need clinical review.</p></article><article><span>FOR HOME CARE AGENCIES</span><h3>Give every aide<br>a stronger foundation.</h3><p>Equip caregivers with a shared daily plan and structured updates for supervising clinicians.</p></article><article><span>FOR HEALTH PLANS</span><h3>Make the recovery<br>episode visible.</h3><p>Explore coordinated support across a fixed-fee, 30-day recovery episode. Measure follow-through and timely escalation.</p></article></div></section>
+
+    <section class="home-oversight"><div class="home-oversight-icon">${svg(I.shield)}</div><div><span class="home-kicker">HUMAN CARE. THOUGHTFULLY SUPPORTED.</span><h2>AI supports the caregiver.<br>Licensed professionals lead the care.</h2><p>CareBridge organizes information and drafts updates. Nurses and pharmacists review concerns and make clinical decisions. Caregivers stay within their role, with a clearer path to the help they need.</p></div><button class="home-outline-button" onclick="go('clinical')">Explore nurse review <span aria-hidden="true">↗</span></button></section>
+
+    <section class="home-final-cta"><span class="home-kicker">THE WAY HOME CAN BE BETTER.</span><h2>Let’s build a better<br>recovery, together.</h2><p>Experience one fictional patient’s journey, from hospital paperwork to a connected care team.</p><button class="home-button" onclick="go('plan')">Try the interactive demo <span aria-hidden="true">↗</span></button><small>Illustrative prototype · No real patient data or clinical service</small></section>
+
+    <footer class="home-footer"><div><strong>CareBridge</strong><p>Recovery, bridged.</p></div><nav aria-label="Footer"><button onclick="go('plan')">Care planning</button><button onclick="go('monitor')">Recovery monitoring</button><button onclick="go('coord')">Care coordination</button><button onclick="go('clinical')">Clinical oversight</button></nav><div class="home-footer-bottom"><span>© ${new Date().getFullYear()} CareBridge. A home recovery concept.</span><span>Fictional demo. Every clinical decision belongs to a licensed professional.</span></div></footer>
+  </div>`;
+};
